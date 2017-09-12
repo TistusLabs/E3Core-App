@@ -10,15 +10,9 @@ function signinController($scope, $rootScope, $state, $timeout, $http, $systemUr
             "UserName": username,
             "Password": password
         }
-        // headers: {
-        //     "Access-Control-Allow-Origin": "*",
-        //     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
-        //     "Access-Control-Allow-Headers": "Content-Type, X-Requested-With",
-        //     "Content-Type": "application/json"
-        // }
         $http({
             method: "POST",
-            url: $systemUrls.svc_access + "/UserService/Access.svc/Login",
+            url: $systemUrls.svc_access + "/E3CoreUser/User.svc/Login",
             dataType: 'json',
             data: userDetails,
             headers: {
@@ -29,6 +23,7 @@ function signinController($scope, $rootScope, $state, $timeout, $http, $systemUr
             if(response.data.SecurityToken != null){
                 $helpers.setCookie("securityToken", response.data.SecurityToken, 1);
                 $helpers.setCookie("SessionKey", response.data.SessionKey, 1);
+                $helpers.setCookie("UserName", username, 1);
                 window.location.href ="../";
             }else if(response.data.Error != null){
                 alert("There was an error: "+response.data.Error.ErrorMessage);

@@ -1,4 +1,4 @@
-var app = angular.module('bitsms', [
+var app = angular.module('e3core', [
     'ui.router',
     'angular.filter',
     'uiKernel'

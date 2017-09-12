@@ -35,11 +35,11 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
     $scope.logoutSession = function () {
         debugger
         var payload = {};
-        payload.SecurityToken = '"' + $helpers.getCookie("securityToken") + '"';
-        payload.SessionKey = '"' + $helpers.getCookie("SessionKey") + '"';
+        payload.UserName = $helpers.getCookie("UserName");
+        payload.SessionKey = $helpers.getCookie("SessionKey");
         $http({
             method: "POST",
-            url: $systemUrls.svc_access + "/UserService/Access.svc/Logout",
+            url: $systemUrls.svc_access + "/E3CoreUser/User.svc/Logout",
             dataType: 'json',
             data: payload,
             headers: {
@@ -48,8 +48,9 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
         }).then(function (response, status) {
             debugger
             if (response.data.Response) {
-                $helpers.removeCookie("securityToken");
+                $helpers.removeCookie("UserName");
                 $helpers.removeCookie("SessionKey");
+                $helpers.removeCookie("securityToken");
                 window.location.href = "auth/";
             } else if (response.data.Error != null) {
                 alert("There was an error: " + response.data.Error.ErrorMessage);

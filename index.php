@@ -3,11 +3,11 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="" ng-app="bitsms">
+<html lang="en" class="" ng-app="e3core">
 
 <head>
   <meta charset="utf-8" />
-  <title>BitSMS</title>
+  <title>E3Core</title>
   <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components"
   />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -39,7 +39,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
         <a href="#/" class="navbar-brand text-lt">
           <i class="fa fa-btc"></i>
           <img src="img/logo.png" alt="." class="hide">
-          <span class="hidden-folded m-l-xs">BitSMS</span>
+          <span class="hidden-folded m-l-xs">E3Core</span>
         </a>
         <!-- / brand -->
       </div>
@@ -434,7 +434,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
     <!-- footer -->
     <footer id="footer" class="app-footer" role="footer">
       <div class="wrapper b-t bg-light">
-        <span class="pull-right">2.2.0 <a href ui-scroll="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>        &copy; {{ currentYear | date : "yyyy" }} Copyright. Team BitSMS
+        <span class="pull-right">2.2.0 <a href ui-scroll="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>        &copy; {{ currentYear | date : "yyyy" }} Copyright. Team E3Core
       </div>
     </footer>
     <!-- / footer -->

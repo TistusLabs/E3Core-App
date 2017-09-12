@@ -4,11 +4,11 @@
 $actual_link = "$_SERVER[REQUEST_URI]";
 if(isset($_COOKIE['securityToken'])){
     
-    if($actual_link == "/bitSMS/auth/"){
+    if($actual_link == "/E3Core-App/auth/"){
         header("Location: ../");
     }
 }else{
-    if($actual_link == "/bitSMS/"){
+    if($actual_link == "/E3Core-App/"){
         header("Location: auth/");
     }
 }   

@@ -227,7 +227,7 @@
     uik.factory('$systemUrls', function () {
         var p = location.protocol;
         return {
-            svc_access: p + "//34.227.57.242"
+            svc_access: p + "//104.45.142.25"
         };
     });
 
