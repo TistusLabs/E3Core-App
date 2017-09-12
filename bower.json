@@ -1,0 +1,22 @@
+{
+  "name": "bitsms",
+  "homepage": "https://github.com/TistusLabs/bitsms",
+  "authors": [
+    "shehantissera <shehan@duosoftware.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^1.0.6",
+    "angular": "^1.6.5",
+    "angular-filter": "^0.5.16"
+  }
+}
