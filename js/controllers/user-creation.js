@@ -5,7 +5,12 @@ function userAdministration($scope, $rootScope, $state, $timeout, $http, $state,
 
     $scope.user = {};
 
+    $scope.setUserImage = function(file){
+        debugger
+    }
+
     $scope.createNewUser = function (user) {
+        debugger
         var payload = {
             "EMail": user.email,
             "FirstName": user.fname,

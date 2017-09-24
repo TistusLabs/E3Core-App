@@ -17,6 +17,7 @@
   "dependencies": {
     "angular-ui-router": "^1.0.6",
     "angular": "^1.6.5",
-    "angular-filter": "^0.5.16"
+    "angular-filter": "^0.5.16",
+    "angular-ui-utils": "bower"
   }
 }

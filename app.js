@@ -1,7 +1,9 @@
 var app = angular.module('e3core', [
     'ui.router',
     'angular.filter',
-    'uiKernel'
+    'uiKernel',
+    'ui.utils',
+    'ui.jq'
 ]);
 
 app.config(function ($stateProvider, $urlRouterProvider) {
@@ -13,6 +15,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('dashboard', {
             url: '/dashboard',
             templateUrl: 'partials/main-dashboard.html'
+        }).state('profile', {
+            url: '/profile',
+            templateUrl: 'partials/main-profile.html'
+        }).state('profile.activity', {
+            url: '/activity',
+            templateUrl: 'partials/profile.activity.html'
         }).state('appone', {
             url: '/appone',
             templateUrl: 'partials/sample-app-one.html'

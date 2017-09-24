@@ -6,6 +6,34 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
     $scope.currentYear = new Date();
     $scope.mainMenu = [];
 
+    $scope.getCurrentProfile = function () {
+        var payload = {
+            "UserName" : $helpers.getCookie("UserName"),
+            "SessionKey" : $helpers.getCookie("SessionKey"),
+            "securityToken" : $helpers.getCookie("securityToken")
+        }
+        $http({
+            method: "POST",
+            url: $systemUrls.svc_access + "/E3CoreUser/User.svc/GetUser",
+            dataType: 'json',
+            data: payload,
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).then(function (response, status) {
+            //debugger
+            if (response.data != null) {
+                $rootScope.profileDetails = response.data;
+            } else if (response.data.Error != null) {
+                alert("There was an error: " + response.data.Error.ErrorMessage);
+            }
+            console.log(response, status);
+        }, function (response, status) {
+            console.log(response, status);
+        });
+    }
+    $scope.getCurrentProfile();
+
     $scope.getMainMenuItems = function () {
         $http({
             url: "././json/main-menu.json",
