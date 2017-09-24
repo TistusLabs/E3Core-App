@@ -191,11 +191,12 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
     <script src="js/ui-nav.js"></script>
     <script src="js/ui-toggle.js"></script>
     <script src="js/ui-client.js"></script>
-    
+
     <script type="text/javascript" src="js/controllers/uiKernal.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="js/controllers/main.controller.js"></script>
-    <script type="text/javascript" src="js/controllers/user-creation.js"></script>
+    <script type="text/javascript" src="js/controllers/app.usercreation.js"></script>
+    <script type="text/javascript" src="js/controllers/app.jiraprojects.js"></script>
 
 </body>
 

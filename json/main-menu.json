@@ -27,6 +27,23 @@
     },
     {
         "name": "mm-user",
+        "displayName": "JIRA",
+        "category": "Navigation",
+        "icon": "glyphicon-inbox",
+        "path": "",
+        "noOfNotifications": 0,
+        "subMenuItems": [
+            {
+                "name": "allprojects",
+                "displayName": "All Projects",
+                "path": "allprojects",
+                "icon": "",
+                "noOfNotifications": 0
+            }
+        ]
+    },
+    {
+        "name": "mm-user",
         "displayName": "Customer",
         "category": "Navigation",
         "icon": "glyphicon-user",

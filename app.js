@@ -30,7 +30,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         }).state('usercreation', {
             url: '/usercreation',
             controller:'UserAdministration',
-            templateUrl: 'partials/user-creation.html'
+            templateUrl: 'partials/app-user-creation.html'
+        }).state('allprojects', {
+            url: '/allprojects',
+            controller:'JIRAdmin',
+            templateUrl: 'partials/app-jira-projects.html'
         });
 
 }
