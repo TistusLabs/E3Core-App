@@ -7,7 +7,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
 
 <head>
   <meta charset="utf-8" />
-  <title>E3Core</title>
+  <title>E3Core Application</title>
   <meta name="description" content="app, web app, responsive, responsive layout, admin, admin panel, admin dashboard, flat, flat ui, ui kit, AngularJS, ui route, charts, widgets, components"
   />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
@@ -18,6 +18,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
 
   <link rel="stylesheet" href="css/font.css" type="text/css" />
   <link rel="stylesheet" href="css/app.css" type="text/css" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
 
 </head>
 
@@ -36,7 +37,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
             <div class="dropdown wrapper">
               <a ng-click="navigateToState('profile')">
                 <span class="thumb-lg w-auto-folded avatar m-t-sm">
-                  <img src="img/a0.jpg" class="img-full" alt="...">
+                  <img ng-src="data:image/JPEG;base64,{{$root.profileDetails.userImage}}" class="img-full" alt="...">
                 </span>
               </a>
               <a data-toggle="dropdown" class="dropdown-toggle hidden-folded">
@@ -197,6 +198,8 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
     <script type="text/javascript" src="js/controllers/main.controller.js"></script>
     <script type="text/javascript" src="js/controllers/app.usercreation.js"></script>
     <script type="text/javascript" src="js/controllers/app.jiraprojects.js"></script>
+    <script type="text/javascript" src="js/controllers/report.sample.one.js"></script>
+    <script type="text/javascript" src="js/controllers/report.sample.two.js"></script>
 
 </body>
 

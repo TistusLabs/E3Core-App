@@ -227,8 +227,7 @@
     uik.factory('$systemUrls', function () {
         var p = location.protocol;
         return {
-            svc_access: p + "//104.45.142.25",
-            jiraAccessAPI: "https://agile-jira.pearson.com/rest/auth/1/session",
+            svc_access: p + "//104.45.142.25"
         };
     });
 

@@ -6,11 +6,21 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
     $scope.currentYear = new Date();
     $scope.mainMenu = [];
 
+    $scope.byteTobase64 = function (buffer) {
+        var binary = '';
+        var bytes = new Uint8Array(buffer);
+        var len = bytes.byteLength;
+        for (var i = 0; i < len; i++) {
+            binary += String.fromCharCode(bytes[i]);
+        }
+        return window.btoa(binary);
+    };
+
     $scope.getCurrentProfile = function () {
         var payload = {
-            "UserName" : $helpers.getCookie("UserName"),
-            "SessionKey" : $helpers.getCookie("SessionKey"),
-            "securityToken" : $helpers.getCookie("securityToken")
+            "UserName": $helpers.getCookie("UserName"),
+            "SessionKey": $helpers.getCookie("SessionKey"),
+            "securityToken": $helpers.getCookie("securityToken")
         }
         $http({
             method: "POST",
@@ -24,6 +34,7 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
             //debugger
             if (response.data != null) {
                 $rootScope.profileDetails = response.data;
+                $rootScope.profileDetails.userImage = $scope.byteTobase64($rootScope.profileDetails.Avatar);
             } else if (response.data.Error != null) {
                 alert("There was an error: " + response.data.Error.ErrorMessage);
             }

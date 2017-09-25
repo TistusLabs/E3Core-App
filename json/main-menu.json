@@ -68,7 +68,7 @@
     },
     {
         "name": "",
-        "displayName": "Subscriber",
+        "displayName": "POC Reports",
         "category": "Reports",
         "icon": "glyphicon-file",
         "path": "other",
@@ -76,15 +76,15 @@
         "subMenuItems": [
             {
                 "name": "report1",
-                "displayName": "Daily Revenue",
-                "path": "daily",
+                "displayName": "Sample Report 1",
+                "path": "sampleone",
                 "icon": "",
                 "noOfNotifications": 0
             },
             {
                 "name": "report1",
-                "displayName": "Activations",
-                "path": "daily",
+                "displayName": "Sample Report 2",
+                "path": "sampletwo",
                 "icon": "",
                 "noOfNotifications": 0
             }

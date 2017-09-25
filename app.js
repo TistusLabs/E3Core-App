@@ -6,7 +6,9 @@ var app = angular.module('e3core', [
     'ui.jq'
 ]);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(function ($stateProvider, $urlRouterProvider,$compileProvider) {
+
+    $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);
 
     $urlRouterProvider.otherwise('/dashboard');
 
@@ -21,9 +23,12 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         }).state('profile.activity', {
             url: '/activity',
             templateUrl: 'partials/profile.activity.html'
-        }).state('appone', {
-            url: '/appone',
-            templateUrl: 'partials/sample-app-one.html'
+        }).state('sampleone', {
+            url: '/sampleone',
+            templateUrl: 'partials/report.sample.one.html'
+        }).state('sampletwo', {
+            url: '/sampletwo',
+            templateUrl: 'partials/report.sample.two.html'
         }).state('apptwo', {
             url: '/apptwo',
             templateUrl: 'partials/sample-app-two.html'
@@ -33,7 +38,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: 'partials/app-user-creation.html'
         }).state('allprojects', {
             url: '/allprojects',
-            controller:'JIRAdmin',
+            controller:'JIRAController',
             templateUrl: 'partials/app-jira-projects.html'
         });
 

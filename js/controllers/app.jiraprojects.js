@@ -1,32 +1,29 @@
-app.controller('UserAdministration', ['$scope', '$rootScope', '$state', '$timeout', '$http', '$state', '$helpers', '$systemUrls', userAdministration]);
+app.controller('JIRAController', ['$scope', '$rootScope', '$state', '$timeout', '$http', '$state', '$helpers', '$systemUrls', jiraController]);
 
-function userAdministration($scope, $rootScope, $state, $timeout, $http, $state, $helpers, $systemUrls) {
+function jiraController($scope, $rootScope, $state, $timeout, $http, $state, $helpers, $systemUrls) {
     console.log("User Administration app started");
 
-    $scope.user = {};
+    $scope.allprojects = [];
 
-    $scope.setUserImage = function (file) {
-        debugger
-    }
-
-    $scope.getJIRASession = function () {
+    $scope.getAllProjects = function () {
         debugger
         var payload = {
-            "username": user.email,
-            "password": user.fname
+            "UserName": $helpers.getCookie("UserName"),
+            "SessionKey": $helpers.getCookie("SessionKey"),
+            "securityToken": $helpers.getCookie("securityToken")
         };
         $http({
             method: "POST",
-            url: $systemUrls.jiraAccessAPI,
+            url: $systemUrls.svc_access + "/E3CoreUser/User.svc/GetAllJiraProjects",
             dataType: 'json',
             data: payload,
             headers: {
                 "Content-Type": "application/json"
             }
         }).then(function (response, status) {
+            debugger
             if (response.data) {
-                alert("User added successfully");
-                $scope.user = {};
+                $scope.allprojects = response.data.Projects;
             } else {
                 alert("There was an error: " + response.data.Error.ErrorMessage);
             }
@@ -35,4 +32,6 @@ function userAdministration($scope, $rootScope, $state, $timeout, $http, $state,
             console.log(response, status);
         });
     };
+
+    $scope.getAllProjects();
 }
