@@ -68,30 +68,6 @@
     },
     {
         "name": "",
-        "displayName": "POC Reports",
-        "category": "Reports",
-        "icon": "glyphicon-file",
-        "path": "other",
-        "noOfNotifications": 0,
-        "subMenuItems": [
-            {
-                "name": "report1",
-                "displayName": "Sample Report 1",
-                "path": "sampleone",
-                "icon": "",
-                "noOfNotifications": 0
-            },
-            {
-                "name": "report1",
-                "displayName": "Sample Report 2",
-                "path": "sampletwo",
-                "icon": "",
-                "noOfNotifications": 0
-            }
-        ]
-    },
-    {
-        "name": "",
         "displayName": "Account",
         "category": "Reports",
         "icon": "glyphicon-file",

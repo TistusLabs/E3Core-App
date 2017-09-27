@@ -25,6 +25,7 @@ app.config(function ($stateProvider, $urlRouterProvider,$compileProvider) {
             templateUrl: 'partials/profile.activity.html'
         }).state('sampleone', {
             url: '/sampleone',
+            controller: 'SampleOneController',
             templateUrl: 'partials/report.sample.one.html'
         }).state('sampletwo', {
             url: '/sampletwo',
