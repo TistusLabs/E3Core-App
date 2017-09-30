@@ -130,7 +130,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
           <!-- nav -->
 
           <!-- aside footer -->
-          <div class="wrapper m-t">
+          <!-- <div class="wrapper m-t">
             <div class="text-center-folded">
               <span class="pull-right pull-none-folded">60%</span>
               <span class="hidden-folded">Milestone</span>
@@ -147,7 +147,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
               <div class="progress-bar progress-bar-primary" style="width: 35%;">
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- / aside footer -->
           </div>
           </div>
