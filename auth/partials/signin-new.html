@@ -1,0 +1,21 @@
+<div class="login-box animated fadeInUp">
+    <div class="box-header">
+        <img src="images/logo.png" alt="" height="75" width="200" />
+    </div>
+    <form name="form">
+        <label for="username">Username</label>
+        <br/>
+        <input type="text" placeholder="Username" id="username" ng-model="user.username" required>
+        <br/>
+        <label for="password">Password</label>
+        <br/>
+        <input type="password" placeholder="Password" id="password" ng-model="user.password" required>
+        <br/>
+        <button ng-click="loginUser(user.username,user.password)" ng-disabled='form.$invalid' type="submit">Sign In</button>
+        <br/>
+    </form>
+
+    <a href="#">
+        <p class="small">Forgot your password?</p>
+    </a>
+</div>

@@ -65,10 +65,23 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
     };
     $scope.getMainMenuItems();
 
+    $scope.loginURL = "";
     $scope.navigateToState = function (location) {
         console.log("Navigating to URL: ", location);
         $state.go(location);
         $state.transitionTo(location);
+        $scope.loginURL = "";
+        if (location == "login1") {
+            $scope.loginURL = "temp_logins/Login/";
+        } else if (location == "login2") {
+            $scope.loginURL = "temp_logins/Login2/";
+        } else if (location == "login3") {
+            $scope.loginURL = "temp_logins/Login3/";
+        } else if (location == "login4") {
+            $scope.loginURL = "temp_logins/Login4/";
+        } else if (location == "login5") {
+            $scope.loginURL = "temp_logins/Login5/";
+        }
     };
 
     $scope.logoutSession = function () {

@@ -11,7 +11,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
         .state('signin', {
             url: '/signin',
-            templateUrl: 'partials/signin.html',
+            templateUrl: 'partials/signin-new.html',
             controller: 'SigninController'
         });
 

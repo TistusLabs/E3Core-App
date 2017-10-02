@@ -65,5 +65,50 @@
                 "noOfNotifications": 0
             }
         ]
+    },
+    {
+        "name": "",
+        "displayName": "Login Pages",
+        "category": "Sample Screens",
+        "icon": "glyphicon-file",
+        "path": "other",
+        "noOfNotifications": 0,
+        "subMenuItems": [
+            {
+                "name": "login1",
+                "displayName": "Login 01",
+                "path": "login1",
+                "icon": "",
+                "noOfNotifications": 0
+            },
+            {
+                "name": "login2",
+                "displayName": "Login 02",
+                "path": "login2",
+                "icon": "",
+                "noOfNotifications": 0
+            },
+            {
+                "name": "login3",
+                "displayName": "Login 03",
+                "path": "login3",
+                "icon": "",
+                "noOfNotifications": 0
+            },
+            {
+                "name": "login4",
+                "displayName": "Login 04",
+                "path": "login4",
+                "icon": "",
+                "noOfNotifications": 0
+            },{
+                "name": "login5",
+                "displayName": "Login 05",
+                "path": "login5",
+                "icon": "",
+                "noOfNotifications": 0
+            }
+
+        ]
     }
 ]
