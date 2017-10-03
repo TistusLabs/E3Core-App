@@ -66,9 +66,19 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
     $scope.getMainMenuItems();
 
     $scope.loginURL = "";
-    $scope.navigateToState = function (location) {
+    $scope.navigateToState = function (location, mainitem) {
+        //debugger
         console.log("Navigating to URL: ", location);
-        $state.go(location);
+        var locationPath = location.path;
+        var locationParrams = {};
+        if (mainitem != null) {
+            if (mainitem.category == "Reports") {
+                locationParrams = { "reportName": location.name, "DisplayName": location.displayName }
+            }
+        }
+
+
+        $state.go(locationPath, locationParrams);
         $state.transitionTo(location);
         $scope.loginURL = "";
         if (location == "login1") {

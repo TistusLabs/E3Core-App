@@ -91,23 +91,26 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
                   <span>{{key}}</span>
                 </li>
                 <div ng-repeat="menuitem in mainMenu | filter : { category :key}">
-                  <li ng-if="menuitem.subMenuItems.length > 0">
+                  
+                
+                
+                <li ng-if="menuitem.subMenuItems.length > 0">
                     <a href class="auto">      
-                  <span class="pull-right text-muted">
-                    <i class="fa fa-fw fa-angle-right text"></i>
-                    <i class="fa fa-fw fa-angle-down text-active"></i>
-                  </span>
-                  <i class="glyphicon {{menuitem.icon}} icon text-primary-dker"></i>
-                  <span class="font-bold">{{menuitem.displayName}}</span>
-                </a>
+                        <span class="pull-right text-muted">
+                          <i class="fa fa-fw fa-angle-right text"></i>
+                          <i class="fa fa-fw fa-angle-down text-active"></i>
+                        </span>
+                        <i class="glyphicon {{menuitem.icon}} icon text-primary-dker"></i>
+                        <span class="hidden-folded">{{menuitem.displayName}}</span>
+                    </a>
                     <ul class="nav nav-sub dk">
                       <li class="nav-sub-header">
                         <a href>
-                      <span>{{menuitem.displayName}}</span>
-                    </a>
+                          <span>{{menuitem.displayName}}</span>
+                        </a>
                       </li>
                       <li ng-repeat="subitem in menuitem.subMenuItems">
-                        <a href ng-click="navigateToState(subitem.path)">
+                        <a href ng-click="navigateToState(subitem,menuitem)">
                       <b ng-if="subitem.noOfNotifications > 0" class="badge bg-info pull-right">{{subitem.noOfNotifications}}</b>
                       <span>{{subitem.displayName}}</span>
                     </a>
@@ -115,11 +118,15 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
                     </ul>
                   </li>
 
+                  
+                  
+                  
+                  
                   <li ng-if="menuitem.subMenuItems.length == 0">
-                    <a href ng-click="navigateToState(menuitem.path)">
+                    <a href ng-click="navigateToState(menuitem)">
                       <b ng-if="menuitem.noOfNotifications > 0" class="badge bg-info pull-right">{{menuitem.noOfNotifications}}</b>
                       <i class="glyphicon {{menuitem.icon}} icon text-info-lter"></i>
-                      <span class="font-bold">{{menuitem.displayName}}</span>
+                      <span class="font-bold hidden-folded">{{menuitem.displayName}}</span>
                     </a>
                   </li>
                 </div>
@@ -198,8 +205,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
     <script type="text/javascript" src="js/controllers/main.controller.js"></script>
     <script type="text/javascript" src="js/controllers/app.usercreation.js"></script>
     <script type="text/javascript" src="js/controllers/app.jiraprojects.js"></script>
-    <script type="text/javascript" src="js/controllers/report.sample.one.js"></script>
-    <script type="text/javascript" src="js/controllers/report.sample.two.js"></script>
+    <script type="text/javascript" src="js/controllers/report.sample.js"></script>
 
 </body>
 

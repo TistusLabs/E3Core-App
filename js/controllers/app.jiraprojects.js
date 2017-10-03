@@ -6,7 +6,7 @@ function jiraController($scope, $rootScope, $state, $timeout, $http, $state, $he
     $scope.allprojects = [];
 
     $scope.getAllProjects = function () {
-        debugger
+        //debugger
         var payload = {
             "UserName": $helpers.getCookie("UserName"),
             "SessionKey": $helpers.getCookie("SessionKey"),

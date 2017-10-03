@@ -53,14 +53,14 @@
             {
                 "name": "report1",
                 "displayName": "Sample Report 1",
-                "path": "sampleone",
+                "path": "report",
                 "icon": "",
                 "noOfNotifications": 0
             },
             {
-                "name": "report1",
+                "name": "report2",
                 "displayName": "Sample Report 2",
-                "path": "sampletwo",
+                "path": "report",
                 "icon": "",
                 "noOfNotifications": 0
             }

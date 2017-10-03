@@ -1,21 +1,21 @@
-<div class="login-box animated fadeInUp">
-    <div class="box-header">
-        <img src="images/logo.png" alt="" height="75" width="200" />
-    </div>
-    <form name="form">
-        <label for="username">Username</label>
-        <br/>
-        <input type="text" placeholder="Username" id="username" ng-model="user.username" required>
-        <br/>
-        <label for="password">Password</label>
-        <br/>
-        <input type="password" placeholder="Password" id="password" ng-model="user.password" required>
-        <br/>
-        <button ng-click="loginUser(user.username,user.password)" ng-disabled='form.$invalid' type="submit">Sign In</button>
-        <br/>
-    </form>
+<section ng-controller="SigninController">
+    <form name="form"  role="login" >
+        <img src="assets/images/logo.png" alt="" class="img-responsive" height="75" width="200" />
 
-    <a href="#">
-        <p class="small">Forgot your password?</p>
-    </a>
-</div>
+        <div class="form-group">
+            <input type="text" name="email" ng-model="user.username" required class="form-control" placeholder="Enter email or nickname"
+            />
+            <span class="glyphicon glyphicon-user"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="password" name="password" ng-model="user.password" required class="form-control" placeholder="Enter password"
+            />
+            <span class="glyphicon glyphicon-lock"></span>
+        </div>
+
+        <button type="submit" name="go" class="btn btn-primary btn-block" ng-click="loginUser(user.username,user.password)" ng-disabled='form.$invalid'>Login Now</button>
+
+        <a href="#">Reset password</a> or <a href="#">create account</a>
+    </form>
+</section>

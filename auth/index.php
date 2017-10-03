@@ -3,57 +3,35 @@ require_once ("../include/config.php"); require_once ("../include/authenticity.p
 ?>
 
 
-	<!DOCTYPE html>
-	<html lang="en" ng-app="loginapp">
+<!DOCTYPE html>
+<html ng-app="loginapp">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=1,initial-scale=1,user-scalable=1" />
+	<title>E3Core Authentication</title>
 
-	<head>
-		<meta charset="utf-8">
-		<title>E3Core Authentication</title>
-
-		<!-- Google Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet'
-		 type='text/css'>
-
-		<link rel="stylesheet" href="css/animate.css">
-		<!-- Custom Stylesheet -->
-		<link rel="stylesheet" href="css/style.css">
-
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-	</head>
-
-	<body ng-controller="MainController">
-		<div class="container">
-			<div class="top">
-				<h1 id="title" class="hidden"><span id="logo">E3CORE <span></span></span>
-				</h1>
-			</div>
-			<div ui-view></div>
-		</div>
-	</body>
-
-	<script>
-		$(document).ready(function () {
-			$('#logo').addClass('animated fadeInDown');
-			$("input:text:visible:first").focus();
-		});
-		$('#username').focus(function () {
-			$('label[for="username"]').addClass('selected');
-		});
-		$('#username').blur(function () {
-			$('label[for="username"]').removeClass('selected');
-		});
-		$('#password').focus(function () {
-			$('label[for="password"]').addClass('selected');
-		});
-		$('#password').blur(function () {
-			$('label[for="password"]').removeClass('selected');
-		});
-
-	</script>
+	<link href="http://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-controller="MainController">
+	<section class="container login-form">
+	<div ui-view></div>
+	</section>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	
 	<script type="text/javascript" src="../bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="../js/controllers/uiKernal.js"></script>
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="controllers/signin.controller.js"></script>
-
-	</html>
+</body>
+</html>

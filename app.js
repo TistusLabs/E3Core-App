@@ -23,16 +23,11 @@ app.config(function ($stateProvider, $urlRouterProvider, $compileProvider) {
         }).state('profile.activity', {
             url: '/activity',
             templateUrl: 'partials/profile.activity.html'
-        }).state('sampleone', {
-            url: '/sampleone',
-            controller: 'SampleOneController',
-            templateUrl: 'partials/report.sample.one.html'
-        }).state('sampletwo', {
-            url: '/sampletwo',
-            templateUrl: 'partials/report.sample.two.html'
-        }).state('apptwo', {
-            url: '/apptwo',
-            templateUrl: 'partials/sample-app-two.html'
+        }).state('report', {
+            url: '/report',
+            params: { 'reportName': null, "DisplayName": null },
+            controller: 'SampleController',
+            templateUrl: 'partials/report.sample.html'
         }).state('usercreation', {
             url: '/usercreation',
             controller: 'UserAdministration',
