@@ -36,20 +36,10 @@ app.config(function ($stateProvider, $urlRouterProvider, $compileProvider) {
             url: '/allprojects',
             controller: 'JIRAController',
             templateUrl: 'partials/app-jira-projects.html'
-        }).state('login1', {
-            url: '/login1',
-            templateUrl: 'partials/app-login-pages.html'
-        }).state('login2', {
-            url: '/login2',
-            templateUrl: 'partials/app-login-pages.html'
-        }).state('login3', {
-            url: '/login3',
-            templateUrl: 'partials/app-login-pages.html'
-        }).state('login4', {
-            url: '/login4',
-            templateUrl: 'partials/app-login-pages.html'
-        }).state('login5', {
-            url: '/login5',
+        }).state('loginpages', {
+            url: '/loginpages',
+            params: { 'loginDirectory': null},
+            controller: 'LoginPageController',
             templateUrl: 'partials/app-login-pages.html'
         });
 

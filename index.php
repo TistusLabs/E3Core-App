@@ -206,6 +206,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
     <script type="text/javascript" src="js/controllers/app.usercreation.js"></script>
     <script type="text/javascript" src="js/controllers/app.jiraprojects.js"></script>
     <script type="text/javascript" src="js/controllers/report.sample.js"></script>
+    <script type="text/javascript" src="js/controllers/logins.sample.js"></script>
 
 </body>
 

@@ -75,23 +75,12 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
             if (mainitem.category == "Reports") {
                 locationParrams = { "reportName": location.name, "DisplayName": location.displayName }
             }
+            if (mainitem.category == "Sample Screens") {
+                locationParrams = { "loginDirectory": location.name }
+            }
         }
-
-
         $state.go(locationPath, locationParrams);
         $state.transitionTo(location);
-        $scope.loginURL = "";
-        if (location == "login1") {
-            $scope.loginURL = "temp_logins/Login/";
-        } else if (location == "login2") {
-            $scope.loginURL = "temp_logins/Login2/";
-        } else if (location == "login3") {
-            $scope.loginURL = "temp_logins/Login3/";
-        } else if (location == "login4") {
-            $scope.loginURL = "temp_logins/Login4/";
-        } else if (location == "login5") {
-            $scope.loginURL = "temp_logins/Login5/";
-        }
     };
 
     $scope.logoutSession = function () {
