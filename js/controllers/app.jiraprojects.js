@@ -21,7 +21,7 @@ function jiraController($scope, $rootScope, $state, $timeout, $http, $state, $he
                 "Content-Type": "application/json"
             }
         }).then(function (response, status) {
-            debugger
+            //debugger
             if (response.data) {
                 $scope.allprojects = response.data.Projects;
             } else {
