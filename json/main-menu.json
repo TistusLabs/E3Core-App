@@ -43,7 +43,7 @@
         ]
     },
     {
-        "name": "",
+        "name": "reports",
         "displayName": "POC Reports",
         "category": "Navigation",
         "icon": "glyphicon-file",
@@ -67,7 +67,7 @@
         ]
     },
     {
-        "name": "",
+        "name": "screens",
         "displayName": "Login Pages",
         "category": "Navigation",
         "icon": "glyphicon-file",

@@ -72,10 +72,10 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
         var locationPath = location.path;
         var locationParrams = {};
         if (mainitem != null) {
-            if (mainitem.category == "Reports") {
+            if (mainitem.name == "reports") {
                 locationParrams = { "reportName": location.name, "DisplayName": location.displayName }
             }
-            if (mainitem.category == "Sample Screens") {
+            if (mainitem.name == "screens") {
                 locationParrams = { "loginDirectory": location.name }
             }
         }
