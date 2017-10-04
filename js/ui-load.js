@@ -21,12 +21,14 @@ var uiLoad = uiLoad || {};
 		 * @returns {*} Promise that will be resolved once the sources has been loaded.
 		 */
 		uiLoad.load = function (srcs) {
+			debugger
 			srcs = $.isArray(srcs) ? srcs : srcs.split(/\s+/);
 			if(!promise){
 				promise = deferred.promise();
 			}
 
       $.each(srcs, function(index, src) {
+		  debugger
       	promise = promise.then( function(){
       		return src.indexOf('.css') >=0 ? loadCSS(src) : loadScript(src);
       	} );
