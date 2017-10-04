@@ -69,7 +69,7 @@
     {
         "name": "screens",
         "displayName": "Login Pages",
-        "category": "Navigation",
+        "category": "Sample Screens",
         "icon": "glyphicon-file",
         "path": "other",
         "noOfNotifications": 0,
