@@ -8,7 +8,7 @@ function signinController($scope, $rootScope, $state, $timeout, $http, $systemUr
     $scope.user = {};
 
     $scope.loginUser = function (username, password) {
-        debugger
+        //debugger
         var userDetails = {
             "UserName": username,
             "Password": password
@@ -22,7 +22,7 @@ function signinController($scope, $rootScope, $state, $timeout, $http, $systemUr
                 "Content-Type": "application/json"
             }
         }).then(function (response, status) {
-            debugger
+            //debugger
             if (response.data.SecurityToken != null) {
                 $helpers.setCookie("securityToken", response.data.SecurityToken, 1);
                 $helpers.setCookie("SessionKey", response.data.SessionKey, 1);

@@ -84,7 +84,7 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
     };
 
     $scope.logoutSession = function () {
-        debugger
+        //debugger
         var payload = {};
         payload.UserName = $helpers.getCookie("UserName");
         payload.SessionKey = $helpers.getCookie("SessionKey");
