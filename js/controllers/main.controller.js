@@ -97,7 +97,7 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
                 "Content-Type": "application/json"
             }
         }).then(function (response, status) {
-            debugger
+            //debugger
             if (response.data.Response) {
                 $helpers.removeCookie("UserName");
                 $helpers.removeCookie("SessionKey");
