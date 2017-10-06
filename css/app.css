@@ -764,7 +764,6 @@ body {
 
 .app-content-body {
   float: left;
-  /* height: 100%; */
   width: 100%;
   padding-bottom: 50px;
 }
@@ -4210,7 +4209,6 @@ a.text-#000000:hover {
 
 .wrapper-md {
   padding: 20px;
-  /* height: 100%; */
 }
 
 .wrapper-lg {
