@@ -80,7 +80,13 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
             }
         }
         $state.go(locationPath, locationParrams);
-        $state.transitionTo(location);
+        $state.transitionTo(locationPath);
+
+        if (locationPath == "dashboard") {
+            $timeout(function () {
+                $scope.DrawCharts();
+            }, 0);
+        }
     };
 
     $scope.logoutSession = function () {
