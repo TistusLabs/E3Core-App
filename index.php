@@ -85,7 +85,45 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
 
           <!-- nav -->
           <nav ui-nav class="navi clearfix">
-            <ul class="nav">
+            <ul class="nav" ng-repeat="(key,categoryItems) in mainMenu | groupBy: 'category'">
+                <li class="hidden-folded padder m-t m-b-sm text-muted text-xs" >
+                  <span>{{key}}</span>
+                </li>
+                <li ng-if="menuitem.subMenuItems.length == 0" ng-repeat="menuitem in mainMenu | filter : { category :key}">
+                    <a href ng-click="navigateToState(menuitem)">
+                      <b ng-if="menuitem.noOfNotifications > 0" class="badge bg-info pull-right">{{menuitem.noOfNotifications}}</b>
+                      <i class="glyphicon {{menuitem.icon}} icon text-info-lter"></i>
+                      <span class="font-bold hidden-folded">{{menuitem.displayName}}</span>
+                    </a>
+                  </li>
+                <li ng-if="menuitem.subMenuItems.length > 0" ng-repeat="menuitem in mainMenu | filter : { category :key}">
+                    <a href class="auto">      
+                        <span class="pull-right text-muted">
+                          <i class="fa fa-fw fa-angle-right text"></i>
+                          <i class="fa fa-fw fa-angle-down text-active"></i>
+                        </span>
+                        <i class="glyphicon {{menuitem.icon}} icon text-primary-dker"></i>
+                        <span class="hidden-folded">{{menuitem.displayName}}</span>
+                    </a>
+                    <ul class="nav nav-sub dk">
+                      <li class="nav-sub-header">
+                        <a href>
+                          <span>{{menuitem.displayName}}</span>
+                        </a>
+                      </li>
+                      <li ng-repeat="subitem in menuitem.subMenuItems">
+                        <a href ng-click="navigateToState(subitem,menuitem)">
+                      <b ng-if="subitem.noOfNotifications > 0" class="badge bg-info pull-right">{{subitem.noOfNotifications}}</b>
+                      <span>{{subitem.displayName}}</span>
+                    </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="line dk"></li>
+            </ul>
+
+            <!-- working part -->
+            <!-- <ul class="nav">
               <div ng-repeat="(key,categoryItems) in mainMenu | groupBy: 'category'">
                 <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
                   <span>{{key}}</span>
@@ -96,7 +134,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
                 
                 <li ng-if="menuitem.subMenuItems.length > 0">
                     <a href class="auto">      
-                        <span class="pull-right text-muted hidden-folded">
+                        <span class="pull-right text-muted">
                           <i class="fa fa-fw fa-angle-right text"></i>
                           <i class="fa fa-fw fa-angle-down text-active"></i>
                         </span>
@@ -132,7 +170,8 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
                 </div>
                 <div>
                   <li class="line dk"></li>
-            </ul>
+            </ul> -->
+            <!-- -->
           </nav>
           <!-- nav -->
 
