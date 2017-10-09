@@ -4,6 +4,7 @@
         "displayName": "Dashboard",
         "category": "Navigation",
         "icon": "glyphicon-stats",
+        "iconColor": "icon text-primary-dker",
         "path": "dashboard",
         "noOfNotifications": 5,
         "subMenuItems": []
@@ -13,6 +14,7 @@
         "displayName": "Administration",
         "category": "Navigation",
         "icon": "glyphicon-user",
+        "iconColor": "icon text-info-lter",
         "path": "",
         "noOfNotifications": 0,
         "subMenuItems": [
@@ -29,7 +31,8 @@
         "name": "mm-user",
         "displayName": "JIRA",
         "category": "Navigation",
-        "icon": "glyphicon-inbox",
+        "icon": "glyphicon-briefcase",
+        "iconColor": "",
         "path": "",
         "noOfNotifications": 0,
         "subMenuItems": [
@@ -46,7 +49,8 @@
         "name": "reports",
         "displayName": "POC Reports",
         "category": "Navigation",
-        "icon": "glyphicon-file",
+        "icon": "glyphicon-eye-open",
+        "iconColor": "",
         "path": "other",
         "noOfNotifications": 0,
         "subMenuItems": [
@@ -71,6 +75,7 @@
         "displayName": "Login Pages",
         "category": "Sample Screens",
         "icon": "glyphicon-file",
+        "iconColor": "",
         "path": "other",
         "noOfNotifications": 0,
         "subMenuItems": [
@@ -101,14 +106,14 @@
                 "path": "loginpages",
                 "icon": "",
                 "noOfNotifications": 0
-            },{
+            },
+            {
                 "name": "login5",
                 "displayName": "Login 05",
                 "path": "loginpages",
                 "icon": "",
                 "noOfNotifications": 0
             }
-
         ]
     }
 ]

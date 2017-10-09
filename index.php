@@ -92,7 +92,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
                 <li ng-if="menuitem.subMenuItems.length == 0" ng-repeat="menuitem in mainMenu | filter : { category :key}">
                     <a href ng-click="navigateToState(menuitem)">
                       <b ng-if="menuitem.noOfNotifications > 0" class="badge bg-info pull-right">{{menuitem.noOfNotifications}}</b>
-                      <i class="glyphicon {{menuitem.icon}} icon text-info-lter"></i>
+                      <i class="glyphicon {{menuitem.icon}} {{menuitem.iconColor}}"></i>
                       <span class="font-bold hidden-folded">{{menuitem.displayName}}</span>
                     </a>
                   </li>
@@ -102,7 +102,7 @@ require_once ("include/config.php"); require_once ("include/authenticity.php");
                           <i class="fa fa-fw fa-angle-right text"></i>
                           <i class="fa fa-fw fa-angle-down text-active"></i>
                         </span>
-                        <i class="glyphicon {{menuitem.icon}} icon text-primary-dker"></i>
+                        <i class="glyphicon {{menuitem.icon}} {{menuitem.iconColor}}"></i>
                         <span class="hidden-folded">{{menuitem.displayName}}</span>
                     </a>
                     <ul class="nav nav-sub dk">
