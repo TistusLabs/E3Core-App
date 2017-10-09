@@ -80,7 +80,7 @@ function mainController($scope, $rootScope, $state, $timeout, $http, $state, $he
             }
         }
         $state.go(locationPath, locationParrams);
-        $state.transitionTo(locationPath);
+        //$state.transitionTo(locationPath);
 
         if (locationPath == "dashboard") {
             $timeout(function () {
