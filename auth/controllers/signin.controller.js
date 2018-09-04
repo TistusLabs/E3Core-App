@@ -13,27 +13,28 @@ function signinController($scope, $rootScope, $state, $timeout, $http, $systemUr
             "UserName": username,
             "Password": password
         }
-        $http({
-            method: "POST",
-            url: $systemUrls.svc_access + "/E3CoreUser/User.svc/Login",
-            dataType: 'json',
-            data: userDetails,
-            headers: {
-                "Content-Type": "application/json"
-            }
-        }).then(function (response, status) {
-            //debugger
-            if (response.data.SecurityToken != null) {
-                $helpers.setCookie("securityToken", response.data.SecurityToken, 1);
-                $helpers.setCookie("SessionKey", response.data.SessionKey, 1);
-                $helpers.setCookie("UserName", username, 1);
-                window.location.href = "../";
-            } else if (response.data.Error != null) {
-                alert("There was an error: " + response.data.Error.ErrorMessage);
-            }
-            console.log(response, status);
-        }, function (response, status) {
-            console.log(response, status);
-        });
+        window.location.href = "../";
+        // $http({
+        //     method: "POST",
+        //     url: $systemUrls.svc_access + "/E3CoreUser/User.svc/Login",
+        //     dataType: 'json',
+        //     data: userDetails,
+        //     headers: {
+        //         "Content-Type": "application/json"
+        //     }
+        // }).then(function (response, status) {
+        //     //debugger
+        //     if (response.data.SecurityToken != null) {
+        //         $helpers.setCookie("securityToken", response.data.SecurityToken, 1);
+        //         $helpers.setCookie("SessionKey", response.data.SessionKey, 1);
+        //         $helpers.setCookie("UserName", username, 1);
+        //         window.location.href = "../";
+        //     } else if (response.data.Error != null) {
+        //         alert("There was an error: " + response.data.Error.ErrorMessage);
+        //     }
+        //     console.log(response, status);
+        // }, function (response, status) {
+        //     console.log(response, status);
+        // });
     }
 }
